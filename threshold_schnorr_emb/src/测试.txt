@@ -1,0 +1,12 @@
+方案测试
+python test_setup.py 测试setup
+python test_sign_emb.py 测试Sign_emb
+python test_verify_extract.py测试认证提取
+python test_sddh_tss.py 测试全程
+
+实验测试
+python test_correctness_small.py 测试正确性
+python test_security_simple.py测试安全性
+python test_efficiency.py 测试效率
+python test_comparison.py 测试对比
+python test_scalability_quick.py测试扩展

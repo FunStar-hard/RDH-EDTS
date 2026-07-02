@@ -1,0 +1,1 @@
+"""Threshold Schnorr Authentication with Embedded Information – research prototype."""

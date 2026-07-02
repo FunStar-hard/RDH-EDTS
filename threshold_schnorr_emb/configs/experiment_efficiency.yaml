@@ -1,0 +1,15 @@
+seed: 42
+
+efficiency:
+  num_trials: 50
+  breakdown_n: 20
+  breakdown_t: 5
+  breakdown_L: 4
+  breakdown_Nmax: 256
+  L_values: [2, 4, 6]
+  t_values_for_L: [2, 3, 5, 10]
+  fixed_n_for_L: 20
+  n_values_for_t: [5, 10, 20, 50]
+  fixed_L_for_t: 4
+  Nmax: 2048
+  trials_per_combo: 30

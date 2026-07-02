@@ -1,0 +1,8 @@
+seed: 42
+
+comparison:
+  n: 10
+  t: 5
+  L_values: [2, 4, 6]
+  Nmax: 2048
+  num_trials: 50

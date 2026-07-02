@@ -1,0 +1,24 @@
+seed: 42
+
+correctness:
+  n_values: [5, 10, 20]
+  t_values: [2, 3, 5]
+  L_values: [1, 2, 3, 4, 5, 6, 7, 8]
+  Nmax_values: [256, 2048]
+  num_trials: 1000
+  fig3:
+    n: 5
+    t: 3
+    Ls_A: [1, 2, 3, 4, 5, 6, 7, 8]
+    Nmaxs_A: [256, 2048]
+    trials_A: 1000
+    Ls_B: [2, 4, 6, 8]
+    Nmax_B: 2048
+    trials_B: 2000
+    Ls_C: [1, 2, 3, 4, 5, 6, 7, 8]
+    Nmax_C: 2048
+    trials_C: 1000
+    success_rate:
+      L_values: [2, 4, 6, 8]
+      Nmax_values: [16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+      num_trials: 1000

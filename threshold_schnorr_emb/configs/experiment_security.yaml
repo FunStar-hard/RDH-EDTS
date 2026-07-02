@@ -1,0 +1,27 @@
+seed: 42
+
+security:
+  uniformity:
+    n: 5
+    t: 3
+    Nmax: 4096
+    L_values: [2, 3, 4, 5, 6]
+    num_samples: 10000
+  dropout:
+    L: 2
+    Nmax: 256
+    combos:
+      - {n: 5, t: 2}
+      - {n: 5, t: 3}
+      - {n: 10, t: 3}
+      - {n: 10, t: 5}
+      - {n: 20, t: 5}
+      - {n: 20, t: 10}
+    num_trials: 500
+  forgery:
+    combos:
+      - {n: 5, t: 3}
+      - {n: 5, t: 5}
+      - {n: 10, t: 3}
+      - {n: 10, t: 5}
+    num_trials: 1000

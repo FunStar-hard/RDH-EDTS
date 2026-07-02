@@ -1,0 +1,91 @@
+seed: 42
+
+scheme:
+  curve: "P-256"
+  hash: "SHA-256"
+  prf: "HMAC-SHA-256"
+  kext_bits: 256
+  n: 5
+  t: 3
+  L: 4
+  Nmax: 256
+
+correctness:
+  n_values: [5, 10]
+  t_values: [2, 3]
+  L_values: [1, 2, 3, 4, 5, 6, 7, 8]
+  Nmax_values: [256, 2048]
+  num_trials: 100
+  fig3:
+    n: 5
+    t: 3
+    Ls_A: [1, 2, 3, 4, 5, 6, 7, 8]
+    Nmaxs_A: [256, 2048]
+    trials_A: 200
+    Ls_B: [2, 4, 6, 8]
+    Nmax_B: 2048
+    trials_B: 200
+    Ls_C: [1, 2, 3, 4, 5, 6, 7, 8]
+    Nmax_C: 2048
+    trials_C: 200
+    success_rate:
+      L_values: [2, 4, 6, 8]
+      Nmax_values: [16, 32, 64, 128, 256, 512, 1024, 2048]
+      num_trials: 100
+
+security:
+  uniformity:
+    n: 5
+    t: 3
+    Nmax: 4096
+    L_values: [2, 3, 4, 5, 6]
+    num_samples: 1000
+  dropout:
+    L: 2
+    Nmax: 256
+    combos:
+      - {n: 5, t: 2}
+      - {n: 5, t: 3}
+      - {n: 10, t: 3}
+      - {n: 10, t: 5}
+    num_trials: 100
+  forgery:
+    combos:
+      - {n: 5, t: 3}
+      - {n: 5, t: 5}
+      - {n: 10, t: 3}
+      - {n: 10, t: 5}
+    num_trials: 100
+
+efficiency:
+  num_trials: 30
+  breakdown_n: 20
+  breakdown_t: 5
+  breakdown_L: 4
+  breakdown_Nmax: 256
+  L_values: [2, 4, 6]
+  t_values_for_L: [2, 3, 5, 10]
+  fixed_n_for_L: 20
+  n_values_for_t: [5, 10, 20]
+  fixed_L_for_t: 4
+  Nmax: 2048
+  trials_per_combo: 20
+
+comparison:
+  n: 10
+  t: 5
+  L_values: [2, 4, 6]
+  Nmax: 2048
+  num_trials: 30
+
+scalability:
+  Nmax: 512
+  num_trials: 20
+  combos:
+    - {n: 5, t: 2, L: 2}
+    - {n: 5, t: 3, L: 2}
+    - {n: 10, t: 4, L: 2}
+    - {n: 10, t: 6, L: 2}
+    - {n: 20, t: 8, L: 2}
+    - {n: 20, t: 12, L: 2}
+    - {n: 50, t: 20, L: 2}
